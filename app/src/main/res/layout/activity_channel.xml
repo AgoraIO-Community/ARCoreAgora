@@ -21,17 +21,6 @@
         android:hint="Enter your channel name here"
         android:layout_centerHorizontal="true" />
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="52dp"
-        android:text="Channel Selection"
-        android:textSize="20dp"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="290dp"
-        android:visibility="gone"/>
-
 
     <RelativeLayout
         android:id="@+id/control_panel"
@@ -50,21 +39,22 @@
             android:id="@+id/btn_join_streamer"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:onClick="onJoinButtonClicked"
-            android:text="Join As Streamer!"
             android:layout_centerInParent="true"
             android:layout_toLeftOf="@+id/center"
-            />
+            android:background="#2196F3"
+            android:onClick="onJoinButtonClicked"
+            android:text="Create" />
 
         <Button
             android:id="@+id/btn_join_audience"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:onClick="onJoinButtonClicked"
-            android:text="Join As Audience!"
             android:layout_centerInParent="true"
+            android:layout_toRightOf="@+id/center"
+            android:background="#CCCECE"
+            android:onClick="onJoinButtonClicked"
             android:scaleType="centerCrop"
-            android:layout_toRightOf="@+id/center"/>
+            android:text="Join" />
 
 
     </RelativeLayout>
