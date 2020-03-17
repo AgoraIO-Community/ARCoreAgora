@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">ARCoreAgora</string>
-    <string name="private_broadcasting_app_id">808f14eae6d24d3384f951134619c258</string>
+    <string name="private_broadcasting_app_id">#YOUR APP ID#</string>
 
     <string name="ar_mode">AR mode</string>
     <string name="agora_mode">Agora mode</string>
