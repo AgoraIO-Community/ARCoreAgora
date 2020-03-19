@@ -35,7 +35,7 @@ public class ChannelActivity extends AppCompatActivity {
                     startActivity(intent);
                     break;
                 case R.id.btn_join_streamer:
-                    Intent intent2 = new Intent(this, AgoraARCoreActivity.class);
+                    Intent intent2 = new Intent(this, AgoraARStreamerActivity.class);
                     intent2.putExtra("ChannelName", channelName);
                     startActivity(intent2);
                     break;

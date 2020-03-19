@@ -67,8 +67,8 @@ import io.agora.rtc.mediaio.MediaIO;
 import io.agora.rtc.video.VideoCanvas;
 import io.agora.rtc.video.VideoEncoderConfiguration;
 
-public class AgoraARCoreActivity extends AppCompatActivity implements GLSurfaceView.Renderer{
-    private static final String TAG = AgoraARCoreActivity.class.getSimpleName();
+public class AgoraARStreamerActivity extends AppCompatActivity implements GLSurfaceView.Renderer{
+    private static final String TAG = AgoraARStreamerActivity.class.getSimpleName();
     private static final int PERMISSION_REQUEST_CODE = 0X0001;
 
     private SurfaceView mRemoteView;
@@ -111,7 +111,7 @@ public class AgoraARCoreActivity extends AppCompatActivity implements GLSurfaceV
             runOnUiThread(new Runnable() {
                 @Override
                 public void run() {
-                    Toast.makeText(AgoraARCoreActivity.this, "Joined channel " + channel, Toast.LENGTH_SHORT).show();
+                    Toast.makeText(AgoraARStreamerActivity.this, "Joined channel " + channel, Toast.LENGTH_SHORT).show();
                 }
             });
         }
@@ -364,7 +364,7 @@ public class AgoraARCoreActivity extends AppCompatActivity implements GLSurfaceV
 
     private void showSnackbarMessage(String message, boolean finishOnDismiss) {
         mMessageSnackbar = Snackbar.make(
-                AgoraARCoreActivity.this.findViewById(android.R.id.content),
+                AgoraARStreamerActivity.this.findViewById(android.R.id.content),
                 message, Snackbar.LENGTH_INDEFINITE);
         mMessageSnackbar.getView().setBackgroundColor(0xbf323232);
         if (finishOnDismiss) {
@@ -651,7 +651,7 @@ public class AgoraARCoreActivity extends AppCompatActivity implements GLSurfaceV
                 if (copyResult == PixelCopy.SUCCESS) {
                     sendARView(outBitmap);
                 } else {
-                    Toast.makeText(AgoraARCoreActivity.this, "Pixel Copy Failed", Toast.LENGTH_SHORT);
+                    Toast.makeText(AgoraARStreamerActivity.this, "Pixel Copy Failed", Toast.LENGTH_SHORT);
                 }
             }
         }, mSenderHandler);
